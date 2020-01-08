@@ -7,6 +7,7 @@ import { Demo } from "./views/demo";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
+import { Main } from "./component/main";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -22,7 +23,7 @@ export const Layout = () => {
 				<ScrollToTop>
 					<Navbar />
 					<Switch>
-						<Route exact path="/" component={Home} />
+						<Route exact path="/" component={Main} />
 						<Route path="/demo" component={Demo} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
