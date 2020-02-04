@@ -9,6 +9,8 @@ import injectContext from "./store/appContext";
 
 import { Main } from "./component/main";
 
+import { Teams } from "./component/teams";
+
 //create your first component
 export const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -20,7 +22,7 @@ export const Layout = () => {
 			<BrowserRouter>
 				<ScrollToTop>
 					<Switch>
-						<Route exact path="/" component={Main} />
+						<Route exact path="/" component={Teams} />
 						<Route path="/demo" component={Demo} />
 						<Route path="/single/:theid" component={Single} />
 						<Route render={() => <h1>Not found!</h1>} />
